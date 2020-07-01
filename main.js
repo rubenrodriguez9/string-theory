@@ -128,6 +128,22 @@ const titleCase = function(str){
 return result
 }
 
+const camelCase = function(str){
+  let result = '';
+  for(let i = 0;i < str.length;i++){
+    if(i === 0){
+      result = result + str[i].toLowerCase()
+    }else if(str[i] === ' '){
+      i = i + 1
+      result = result + str[i].toUpperCase();
+    }else if(i < str.length){
+      result = result + str[i].toLowerCase()
+    }
+    
+  }
+return result
+}
+
       
       
        
